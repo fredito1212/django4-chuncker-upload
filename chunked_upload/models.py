@@ -6,7 +6,7 @@ from django.conf import settings
 from django.core.files.uploadedfile import UploadedFile
 from django.utils import timezone
 
-from .settings import EXPIRATION_DELTA, UPLOAD_TO, STORAGE, DEFAULT_MODEL_USER_FIELD_NULL, DEFAULT_MODEL_USER_FIELD_BLANK
+from .settings import EXPIRATION_DELTA, UPLOAD_TO, STORAGE, DEFAULT_MODEL_USER_FIELD_NULL, DEFAULT_MODEL_USER_FIELD_BLANK, DEFAULT_CUSTOM_USER_MODEL
 from .constants import CHUNKED_UPLOAD_CHOICES, UPLOADING
 
 
@@ -14,8 +14,8 @@ def generate_upload_id():
     return uuid.uuid4().hex
 
 def getUserModel():
-    if settings.CUSTOM_USER_MODEL:
-        return settings.CHUNKED_CUSTOM_USER_MODEL
+    if DEFAULT_CUSTOM_USER_MODEL:
+        return DEFAULT_CUSTOM_USER_MODEL
     else:
         return settings.AUTH_USER_MODEL
 

@@ -131,7 +131,7 @@ Add any of these variables into your project settings to override them.
 * Default: ``None``
 
 ``CHUNKED_CUSTOM_USER_MODEL``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Use a custom user model instead of Django default (Auth User).
 * Default: ``None``
