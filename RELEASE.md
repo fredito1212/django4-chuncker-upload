@@ -1,4 +1,3 @@
 
-# Version 2.0.1 
-* `CHUNKED_CUSTOM_USER_MODEL` settings variable added
-* Modify the import ugettext to gettext for compatibility on newer versions of Django
+# Version 2.0.2
+* Fixed bug with the DEFAULT_CUSTOM_USER_MODEL
